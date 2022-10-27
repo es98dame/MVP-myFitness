@@ -1,0 +1,291 @@
+/* Global CSS variables */
+:root {
+  --spacing-company: 3rem;
+  --font-weight: 400;
+  --border-radius: 0;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar-track
+{
+	border: 5px solid white;
+	// border color does not support transparent on scrollbar
+	// border-color: transparent;
+	background-color: #b2bec3;
+}
+
+::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #74b9ff;
+	border-radius: 10px;
+}
+
+
+/* Typography */
+h2,
+h3,
+hgroup > :last-child {
+  font-weight: 200;
+}
+
+small {
+  color: var(--muted-color);
+}
+
+/* Header */
+.hero {
+  background-color: #394046;
+  background-image: url("./workout.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+header {
+  padding: var(--spacing-company) 0;
+}
+
+header hgroup > :last-child {
+  color: var(--h3-color);
+}
+
+header hgroup {
+  margin-bottom: var(--spacing-company);
+}
+
+/* Nav */
+summary[role="link"].contrast:is([aria-current],:hover,:active,:focus) {
+  background-color: transparent;
+  color: var(--contrast-hover);
+}
+
+/* Main */
+/* @media (min-width: 992px) {
+  main .grid {
+    grid-column-gap: var(--spacing-company);
+    grid-template-columns: auto 25%;
+  }
+} */
+
+#mainicon {
+  text-align: center;
+  margin-top: 20px;
+  transition: all .2s ease-in-out;
+}
+#mainicon:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+
+form.grid {
+  grid-row-gap: 0;
+}
+
+/* Aside nav */
+aside img {
+  margin-bottom: 0.25rem;
+}
+
+aside p {
+  margin-bottom: var(--spacing-company);
+  line-height: 1.25;
+}
+
+/* calendar */
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-size: medium;
+}
+.react-calendar {
+  --primary-inverse: black;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #f87171;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 2px;
+  position: relative;
+  left: 43%;
+}
+/* dailynote */
+#description {
+  height: 300px;
+
+}
+
+#just-line-break {
+  white-space: pre-line;
+}
+
+
+/* .dietsearchgrid {
+  grid-column-gap: var(--spacing-company);
+  grid-template-columns: auto 25%;
+} */
+
+#recipesearch {
+  grid-column: 1/4;
+}
+
+.searchbutton {
+  grid-column: 4/4;
+  border-radius: 5rem;
+}
+
+
+/* Nutrition facts */
+.performance-facts {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 0.5rem;
+  table {
+    border-collapse: collapse;
+  }
+}
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+  p {
+    margin : 0 ;
+  }
+}
+.performance-facts__table {
+  width: 100%;
+  thead tr {
+    th,
+    td {
+      border: 0;
+    }
+  }
+  th,
+  td {
+    font-weight: normal;
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black;
+    white-space: nowrap;
+  }
+  td {
+    &:last-child {
+      text-align: right;
+    }
+  }
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  .thick-row {
+    th,
+    td {
+      border-top-width: 5px;
+    }
+  }
+}
+.small-info {
+  font-size: 0.7rem;
+}
+
+.performance-facts__table--small {
+  @extend .performance-facts__table;
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+  thead {
+    tr {
+      border-bottom: 1px solid black;
+    }
+  }
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+  th,
+  td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.performance-facts__table--grid {
+  @extend .performance-facts__table;
+  margin: 0 0 0.5rem 0;
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: "•";
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 10px solid black;
+}
+.thin-end {
+  border-bottom: 1px solid black;
+}
+
+/* recipe section */
+.recipesection {
+  text-align: center;
+  line-height: 35px;
+}
+
+/* gain */
+
+.box {
+  margin-left: 103px;
+  margin-top: 214px;
+}
+
+.gaincontainer {
+  width : 650px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--spacing);
+  padding-left: var(--spacing);
+}
+
+input[type='radio'][name='buttonGroup'] { display:none; }
+.goallabel {
+  display:inline-block;
+  padding:3px;
+  border:1px solid #e0e0e0;
+  border-radius:3px;
+  text-align:center;
+}
+
+
+/* Clicking a label will select its corresponding hidden radio button
+   We can select that radio buttons sibling label and style it. */
+input[type='radio'][name='buttonGroup']:checked + label { background-color:#1095c1; }
+
+/* nav */
+.navform {
+  width: 350px;
+  font-size: 16.5px;
+}
