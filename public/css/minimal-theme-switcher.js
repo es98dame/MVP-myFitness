@@ -17,7 +17,6 @@ const themeSwitcher = {
 
   // Init
   init() {
-    console.log('hi');
     this.scheme = this.schemeFromLocalStorage;
     this.initSwitchers();
   },
@@ -41,7 +40,6 @@ const themeSwitcher = {
 
   // Init switchers
   initSwitchers() {
-    console.log('hi2');
     const buttons = document.querySelectorAll(this.buttonsTarget);
     buttons.forEach((button) => {
       button.addEventListener("click", event => {

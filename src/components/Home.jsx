@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
+import { useLocation } from 'react-router-dom';
 import DailyNote from './DailyNote.jsx';
 import DietNote from './DietNote.jsx';
 import RecipeList from './RecipeList.jsx';
@@ -11,19 +12,19 @@ import NavBar from './NavBar.jsx';
 
 
 const App = () => {
+  const location = useLocation();
   const [carb, setCarb] = useState(0);
   const [fat, setFat] = useState(0);
   const [protein, setProtein] = useState(0);
-  const [totalcarb, setTotalcarb] = useState(366);
-  const [totalfat, setTotalfat] = useState(97);
-  const [totalprotein, setTotalprotein] = useState(88);
+  const [totalcarb, setTotalcarb] = useState(location.state.carb);
+  const [totalfat, setTotalfat] = useState(location.state.fat);
+  const [totalprotein, setTotalprotein] = useState(location.state.protein);
 
   const calculate = (a , b) => {
       return Math.round(a/b * 100);
   };
 
   useEffect(()=>{
-
     const todaydate = moment(new Date()).utc().format("YYYY-MM-DD");
     getfoodlog(todaydate)
     .then((res) => {

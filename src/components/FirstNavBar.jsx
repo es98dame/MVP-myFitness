@@ -16,7 +16,7 @@ const NavBar = () => {
   return(
     <nav className="container-fluid">
     <ul>
-      <li><a href="./" className="contrast" onClick="event.preventDefault()"><strong>My Fitness</strong></a></li>
+      <li><a href="./" className="contrast" onClick={event.preventDefault()}><strong>My Fitness</strong></a></li>
     </ul>
     <ul>
       <li>

@@ -11,6 +11,16 @@ db.once('open', () => {
   console.log('mongoose connected successfully');
 });
 
+// user
+const userSchema = mongoose.Schema({
+  weight: Number,
+  height: Number,
+  gender : Number,
+  goal : Number
+});
+
+const User = mongoose.model('User', userSchema);
+
 // daily note
 const notesSchema = mongoose.Schema({
   date: Date,
