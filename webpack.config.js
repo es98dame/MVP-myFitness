@@ -46,6 +46,8 @@ module.exports = {
     new HtmlWebpackPlugin({ template: `./public/index.html` }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({ filename: './public/css/pico.css' }),
-    new Dotenv()
+    new Dotenv({
+      systemvars: true
+  })
   ],
 };
