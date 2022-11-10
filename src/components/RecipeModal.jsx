@@ -19,7 +19,6 @@ const RecipeModal = ({handleClose}) => {
 
   const searchClick = (e) => {
     e.preventDefault();
-    console.log(keyword);
     getrecipes(keyword, diet, mealtype)
     .then(res => setRecipeList(res.hits))
     .catch(err => console.log(err));

@@ -20,7 +20,6 @@ const NoteModal = ({handleClose}) => {
       console.log(res);
       const datelist = [];
       res.map((data)=> datelist.push(moment(data.date).utc().format("YYYY-MM-DD")));
-      console.log(datelist);
       setMark(datelist);
       setNotelist(res);
     })
@@ -32,7 +31,6 @@ const NoteModal = ({handleClose}) => {
   const submitClick = (e) => {
     e.preventDefault();
     let dataObj = {date: date , description : description};
-    console.log(dataObj);
     postDailynotes(dataObj)
     .then(response => console.log(response))
     .catch(err => console.log(err));

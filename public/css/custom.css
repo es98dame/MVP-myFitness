@@ -94,7 +94,7 @@ aside p {
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
-  font-size: medium;
+  font-size: revert;
 }
 .react-calendar {
   --primary-inverse: black;

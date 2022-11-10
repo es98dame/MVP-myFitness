@@ -44,7 +44,7 @@ const getrecipes = (keyword = 'salad', diet, mealtype ) => {
   if(mealtype !== undefined && mealtype !== ''){
     url = url + `&mealType=${mealtype}`;
   }
-  console.log('url', url);
+
   return axios.get(url)
   .then((res) => res.data)
   .catch((err) => console.error(err));

@@ -9,7 +9,6 @@ const DietModal = ({handleClose}) => {
 
   const searchClick = (e) => {
     e.preventDefault();
-    console.log(keyword);
     getfoodname(keyword)
     .then(res => setFoodlist(res.hints))
     .catch(err => console.log(err));
