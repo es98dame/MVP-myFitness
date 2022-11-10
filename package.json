@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "concurrently --kill-others \"npm run server-start\" \"npm run build\"",
-    "build": "webpack --mode production",
+    "build": "concurrently \"node server/index.js\" \"webpack --mode production\"",
     "dev": "webpack serve --open",
     "server-start": "node server/index.js"
   },
