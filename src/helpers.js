@@ -1,4 +1,5 @@
 import axios from 'axios';
+require('dotenv').config();
 
 const HOST = process.env.REACT_APP_HOST;
 const FOODAPI = process.env.REACT_APP_REACT_APP_FOODAPI;
