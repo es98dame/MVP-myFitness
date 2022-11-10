@@ -22,4 +22,3 @@ config.js
 
 # env
 .env
-.vercel

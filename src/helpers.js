@@ -5,13 +5,13 @@ const FOODAPI = process.env.REACT_APP_REACT_APP_FOODAPI;
 const RECIPEAPI = process.env.REACT_APP_RECIPEAPI;
 
 const getDailynotes = () => {
-  return axios.get(`/getdailynotes`)
+  return axios.get(HOST + `/getdailynotes`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
 
 const postDailynotes = (data) => {
-  return axios.post(`/postdailynotes`, data)
+  return axios.post(HOST + `/postdailynotes`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
@@ -23,13 +23,13 @@ const getfoodname = (keyword)=>{
 }
 
 const addfoodlog = (data) => {
-  return axios.post(`/postfoodlog`, data)
+  return axios.post(HOST + `/postfoodlog`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getfoodlog = (date) => {
-  return axios.get(`/getfoodlog?date=${date}`)
+  return axios.get(HOST + `/getfoodlog?date=${date}`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
