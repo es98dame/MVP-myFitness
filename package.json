@@ -19,7 +19,7 @@
     "start": "concurrently --kill-others \"npm run server-start\" \"npm run dev\"",
     "build": "webpack --mode=production",
     "dev": "webpack serve --open",
-    "server-start": "nodemon server/index.js"
+    "server-start": "node server/index.js"
   },
   "name": "MVP-myFitness",
   "version": "1.0.0",
