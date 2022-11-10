@@ -5,37 +5,37 @@ const FOODAPI = process.env.REACT_APP_REACT_APP_FOODAPI;
 const RECIPEAPI = process.env.REACT_APP_RECIPEAPI;
 
 const getDailynotes = () => {
-  return axios.get(HOST + `/getdailynotes`)
+  return axios.get(`/getdailynotes`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
 
 const postDailynotes = (data) => {
-  return axios.post(HOST + `/postdailynotes`, data)
+  return axios.post(`/postdailynotes`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
 
 const getfoodname = (keyword)=>{
-  return axios.get(FOODAPI + `&ingr=${keyword}&nutrition-type=cooking`)
+  return axios.get(`&ingr=${keyword}&nutrition-type=cooking`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const addfoodlog = (data) => {
-  return axios.post(HOST + `/postfoodlog`, data)
+  return axios.post(`/postfoodlog`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getfoodlog = (date) => {
-  return axios.get(HOST + `/getfoodlog?date=${date}`)
+  return axios.get(`/getfoodlog?date=${date}`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getrecipes = (keyword = 'salad', diet, mealtype ) => {
-  let url = RECIPEAPI + `&q=${keyword}`;
+  let url = `&q=${keyword}`;
 
   if(diet !== undefined && diet !== '' ){
     url = url + `&diet=${diet}`;
