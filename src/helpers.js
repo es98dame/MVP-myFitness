@@ -17,7 +17,7 @@ const postDailynotes = (data) => {
 };
 
 const getfoodname = (keyword)=>{
-  return axios.get(`&ingr=${keyword}&nutrition-type=cooking`)
+  return axios.get(FOODAPI + `&ingr=${keyword}&nutrition-type=cooking`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
@@ -35,7 +35,7 @@ const getfoodlog = (date) => {
 }
 
 const getrecipes = (keyword = 'salad', diet, mealtype ) => {
-  let url = `&q=${keyword}`;
+  let url = RECIPEAPI + `&q=${keyword}`;
 
   if(diet !== undefined && diet !== '' ){
     url = url + `&diet=${diet}`;
