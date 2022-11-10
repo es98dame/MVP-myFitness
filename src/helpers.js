@@ -1,44 +1,41 @@
 import axios from 'axios';
-const config = require('../config.js');
 
-
-const host = config.HOST;
-const foodapi = config.FOODAPI;
-const recipeapi = config.RECIPEAPI;
-
+const HOST = process.env.REACT_APP_HOST;
+const FOODAPI = process.env.REACT_APP_REACT_APP_FOODAPI;
+const RECIPEAPI = process.env.REACT_APP_RECIPEAPI;
 
 const getDailynotes = () => {
-  return axios.get(host + `/getdailynotes`)
+  return axios.get(HOST + `/getdailynotes`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
 
 const postDailynotes = (data) => {
-  return axios.post(host + `/postdailynotes`, data)
+  return axios.post(HOST + `/postdailynotes`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
 
 const getfoodname = (keyword)=>{
-  return axios.get(foodapi + `&ingr=${keyword}&nutrition-type=cooking`)
+  return axios.get(FOODAPI + `&ingr=${keyword}&nutrition-type=cooking`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const addfoodlog = (data) => {
-  return axios.post(host + `/postfoodlog`, data)
+  return axios.post(HOST + `/postfoodlog`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getfoodlog = (date) => {
-  return axios.get(host + `/getfoodlog?date=${date}`)
+  return axios.get(HOST + `/getfoodlog?date=${date}`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getrecipes = (keyword = 'salad', diet, mealtype ) => {
-  let url = recipeapi + `&q=${keyword}`;
+  let url = RECIPEAPI + `&q=${keyword}`;
 
   if(diet !== undefined && diet !== '' ){
     url = url + `&diet=${diet}`;

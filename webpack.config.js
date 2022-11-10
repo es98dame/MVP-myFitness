@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -45,5 +46,6 @@ module.exports = {
     new HtmlWebpackPlugin({ template: `./public/index.html` }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({ filename: './public/css/pico.css' }),
+    new Dotenv()
   ],
 };

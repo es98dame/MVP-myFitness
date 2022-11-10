@@ -1,5 +1,8 @@
+require('dotenv').config();
+const mongouri = process.env.REACT_APP_DB;
+console.log(mongouri);
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/myfitness', { useNewUrlParser: true });
+mongoose.connect(mongouri, { useNewUrlParser: true });
 
 const db = mongoose.connection;
 
