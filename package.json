@@ -16,7 +16,7 @@
     "webpack-dev-server": "^4.8.1"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm run server-start\" \"npm run dev\"",
+    "start": "concurrently --kill-others \"npm run server-start\" \"npm run build\"",
     "build": "webpack --progress --mode production",
     "dev": "webpack serve --open",
     "server-start": "node server/index.js"
