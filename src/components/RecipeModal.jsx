@@ -40,11 +40,11 @@ const RecipeModal = ({handleClose}) => {
   return(
   <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"
-      onClick={() => {handleClose();}}>
+      onClick={handleClose}>
     </a>
 
     <main className="container">

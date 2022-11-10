@@ -29,11 +29,6 @@ const NoteModal = ({handleClose}) => {
     })
   }, []);
 
-  // useEffect(()=>{
-
-
-  // },[value]);
-
   const submitClick = (e) => {
     e.preventDefault();
     let dataObj = {date: date , description : description};
@@ -54,7 +49,7 @@ const NoteModal = ({handleClose}) => {
   return(
     <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"

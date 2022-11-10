@@ -22,7 +22,7 @@ const DietModal = ({handleClose}) => {
   return(
   <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"
