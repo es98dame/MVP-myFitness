@@ -5,7 +5,7 @@ const FOODAPI = process.env.REACT_APP_REACT_APP_FOODAPI;
 const RECIPEAPI = process.env.REACT_APP_RECIPEAPI;
 
 const getDailynotes = () => {
-  return axios.get(`/getdailynotes`)
+  return axios.get(HOST + `/getdailynotes`)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 };
