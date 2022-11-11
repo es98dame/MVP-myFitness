@@ -13,7 +13,7 @@ const Foodlist = ({foodname, image, nutrients}) => {
       fat : nutrients['FAT'],
       carb : nutrients['CHOCDF']};
     addfoodlog(dataObj)
-    .then(response => alert(response))
+    .then(response => console.log(response))
     .catch(err => console.log(err));
   }
 

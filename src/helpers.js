@@ -26,7 +26,7 @@ const addfoodlog = (data) => {
   return axios.post(HOST + `/postfoodlog`, data, {headers: {
     'Content-Type': 'application/json',
   }})
-    .then((res) => alert(res.data))
+    .then(() => window.location.reload())
     .catch((err) => console.error(err));
 }
 
