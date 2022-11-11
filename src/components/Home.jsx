@@ -26,9 +26,9 @@ const App = () => {
 
   useEffect(()=>{
     const todaydate = moment(new Date()).utc().format("YYYY-MM-DD");
-    let acc_carb = 0;
-    let acc_fat = 0;
-    let acc_protein = 0;
+    let acc_carb = carb;
+    let acc_fat = fat;
+    let acc_protein = protein;
     getfoodlog(todaydate)
     .then((res) => {
       res.map((data)=>{
