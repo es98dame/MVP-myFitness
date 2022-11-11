@@ -26,16 +26,21 @@ const App = () => {
 
   useEffect(()=>{
     const todaydate = moment(new Date()).utc().format("YYYY-MM-DD");
+    let acc_carb = 0;
+    let acc_fat = 0;
+    let acc_protein = 0;
     getfoodlog(todaydate)
     .then((res) => {
-      console.log('home'+ res);
       res.map((data)=>{
         if(data.date===todaydate){
-          setCarb(carb + data.carb);
-          setFat(fat + data.fat);
-          setProtein(protein + data.protein);
+          acc_carb += data.carb;
+          acc_fat += data.fat;
+          acc_protein += data.protein;
         }
       })
+      setCarb(acc_carb);
+      setFat(acc_fat);
+      setProtein(acc_protein);
     })
     .catch(err => {
       console.error(err);
