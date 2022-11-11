@@ -23,12 +23,15 @@ const getfoodname = (keyword)=>{
 }
 
 const addfoodlog = (data) => {
+  console.log('url'+ HOST + `/postfoodlog`);
+  console.log('data'+data);
   return axios.post(HOST + `/postfoodlog`, data)
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
 
 const getfoodlog = (date) => {
+  console.log('call');
   return axios.get(HOST + `/getfoodlog?date=${date}`)
     .then((res) => res.data)
     .catch((err) => console.error(err));

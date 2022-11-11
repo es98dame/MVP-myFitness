@@ -28,6 +28,7 @@ const App = () => {
     const todaydate = moment(new Date()).utc().format("YYYY-MM-DD");
     getfoodlog(todaydate)
     .then((res) => {
+      console.log(res.data);
       res.map((data)=>{
         if(data.date===todaydate){
           setCarb(carb + data.carb);
