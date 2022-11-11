@@ -12,9 +12,7 @@ const Foodlist = ({foodname, image, nutrients}) => {
       protein : nutrients['PROCNT'],
       fat : nutrients['FAT'],
       carb : nutrients['CHOCDF']};
-    addfoodlog(dataObj)
-    .then(response => alert(response))
-    .catch(err => console.log(err));
+    addfoodlog(dataObj);
   }
 
 
