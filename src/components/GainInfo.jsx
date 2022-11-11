@@ -18,9 +18,6 @@ const GainInfo = () => {
       },
     });
   }
-  useEffect(()=>{
-   console.log('check:'+process.env.REACT_APP_RECIPEAPI);
-  },[]);
 
 return (
   <div>

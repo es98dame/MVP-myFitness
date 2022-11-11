@@ -9,7 +9,6 @@ const DietModal = ({handleClose}) => {
 
   const searchClick = (e) => {
     e.preventDefault();
-    console.log(keyword);
     getfoodname(keyword)
     .then(res => setFoodlist(res.hints))
     .catch(err => console.log(err));
@@ -22,7 +21,7 @@ const DietModal = ({handleClose}) => {
   return(
   <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"

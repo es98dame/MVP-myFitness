@@ -22,15 +22,14 @@ function getGender(){
 			return (document.getElementsByName("gener")[i].value);
     	}
 	}
+    return 'male';
 }
 
 function calculateBasicMetabolism(){
     if(getGender()=="male"){
-
         return 10*getWeight()+ 6.25*getHeight()+5
     }
     else{
-
         return 10*getWeight()+ 6.25*getHeight()-161
     }
 
@@ -72,7 +71,7 @@ function modifiedCalorie(){
 }
 
 function getWeight(){
-	var weight = document.js_wr.weight.value;
+	var weight = document.js_wr.weight.value === '' ? 0 : document.js_wr.weight.value ;
     return Number(weight/2.2046)
 }
 
@@ -84,11 +83,12 @@ function getAim(){
 			return (document.getElementsByName("buttonGroup")[i].value);
     	}
 	}
+    return 'one';
 }
 
 function getHeight(){
-	var feet = document.js_wr.feet.value;
-  var inch = document.js_wr.inch.value;
+	var feet = document.js_wr.feet.value  === '' ? 0 : document.js_wr.feet.value ;
+  var inch = document.js_wr.inch.value === '' ? 0 : document.js_wr.inch.value ;
   var height = feet*30.48 + inch*2.54;
 	return Number(height)
 }

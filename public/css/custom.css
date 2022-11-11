@@ -6,14 +6,6 @@
 }
 
 /* Scroll bar */
-::-webkit-scrollbar-track
-{
-	border: 5px solid white;
-	/* border color does not support transparent on scrollbar
-	 border-color: transparent; */
-	background-color: #b2bec3;
-}
-
 ::-webkit-scrollbar
 {
 	width: 15px;
@@ -102,7 +94,7 @@ aside p {
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
-  font-size: medium;
+  font-size: revert;
 }
 .react-calendar {
   --primary-inverse: black;

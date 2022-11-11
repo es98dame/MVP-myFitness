@@ -20,7 +20,6 @@ const NoteModal = ({handleClose}) => {
       console.log(res);
       const datelist = [];
       res.map((data)=> datelist.push(moment(data.date).utc().format("YYYY-MM-DD")));
-      console.log(datelist);
       setMark(datelist);
       setNotelist(res);
     })
@@ -29,15 +28,9 @@ const NoteModal = ({handleClose}) => {
     })
   }, []);
 
-  // useEffect(()=>{
-
-
-  // },[value]);
-
   const submitClick = (e) => {
     e.preventDefault();
     let dataObj = {date: date , description : description};
-    console.log(dataObj);
     postDailynotes(dataObj)
     .then(response => console.log(response))
     .catch(err => console.log(err));
@@ -54,7 +47,7 @@ const NoteModal = ({handleClose}) => {
   return(
     <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"

@@ -19,7 +19,6 @@ const RecipeModal = ({handleClose}) => {
 
   const searchClick = (e) => {
     e.preventDefault();
-    console.log(keyword);
     getrecipes(keyword, diet, mealtype)
     .then(res => setRecipeList(res.hits))
     .catch(err => console.log(err));
@@ -40,11 +39,11 @@ const RecipeModal = ({handleClose}) => {
   return(
   <dialog open>
     <article>
-    <a href="#close"
+    <a
       aria-label="Close"
       className="close"
       data-target="modal-example"
-      onClick={() => {handleClose();}}>
+      onClick={handleClose}>
     </a>
 
     <main className="container">
