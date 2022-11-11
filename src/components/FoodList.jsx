@@ -6,7 +6,6 @@ import {addfoodlog} from '../helpers.js';
 const Foodlist = ({foodname, image, nutrients}) => {
 
   const addfood = (e) => {
-    e.preventDefault();
     let dataObj = {date: moment(new Date()).utc().format("YYYY-MM-DD") ,
       energy : nutrients['ENERC_KCAL'],
       protein : nutrients['PROCNT'],
@@ -15,7 +14,7 @@ const Foodlist = ({foodname, image, nutrients}) => {
     addfoodlog(dataObj)
     .then(response => console.log(response))
     .catch(err => console.log(err));
-
+    window.location.reload(false);
   }
 
 
