@@ -17,7 +17,6 @@ const NoteModal = ({handleClose}) => {
   useEffect(()=>{
     getDailynotes()
     .then((res) => {
-      console.log(res);
       const datelist = [];
       res.map((data)=> datelist.push(moment(data.date).utc().format("YYYY-MM-DD")));
       setMark(datelist);
