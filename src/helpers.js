@@ -31,7 +31,7 @@ const addfoodlog = (data) => {
 }
 
 const getfoodlog = (date) => {
-  console.log('call');
+  console.log(HOST + `/getfoodlog?date=${date}`);
   return axios.get(HOST + `/getfoodlog?date=${date}`)
     .then((res) => res.data)
     .catch((err) => console.error(err));

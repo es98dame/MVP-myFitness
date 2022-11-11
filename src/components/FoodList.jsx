@@ -14,7 +14,6 @@ const Foodlist = ({foodname, image, nutrients}) => {
     addfoodlog(dataObj)
     .then(response => console.log(response))
     .catch(err => console.log(err));
-    window.location.reload(false);
   }
 
 
