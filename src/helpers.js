@@ -24,7 +24,9 @@ const getfoodname = (keyword)=>{
 
 const addfoodlog = (data) => {
   alert('addfoodlog called' + JSON.stringify(data));
-  return axios.post(HOST + `/postfoodlog`, data)
+  return axios.post(HOST + `/postfoodlog`, data, {headers: {
+    'Content-Type': 'application/json',
+  }})
     .then((res) => res.data)
     .catch((err) => console.error(err));
 }
