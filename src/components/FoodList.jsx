@@ -6,7 +6,6 @@ import {addfoodlog} from '../helpers.js';
 const Foodlist = ({foodname, image, nutrients}) => {
 
   const addfood = (e) => {
-    e.preventDefault();
     let dataObj = {date: moment(new Date()).utc().format("YYYY-MM-DD") ,
       energy : nutrients['ENERC_KCAL'],
       protein : nutrients['PROCNT'],
