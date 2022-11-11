@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.options('*', cors()) //Pre-Flight
 
 // ------------------------------------Routes API URL
 // get daily notes
